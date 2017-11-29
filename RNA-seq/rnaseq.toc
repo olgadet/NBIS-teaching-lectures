@@ -1,5 +1,26 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {1}{Why sequence transcriptome?}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Overview}{4}{0}{1}
 \beamer@sectionintoc {2}{From RNA to sequence}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{Workflow}{10}{0}{2}
+\beamer@subsectionintoc {2}{2}{.fastq}{12}{0}{2}
+\beamer@subsectionintoc {2}{3}{Quality score}{18}{0}{2}
+\beamer@subsectionintoc {2}{4}{SE/PE}{22}{0}{2}
+\beamer@subsectionintoc {2}{5}{Strandness}{23}{0}{2}
 \beamer@sectionintoc {3}{Reference based data analysis pipeline}{24}{0}{3}
+\beamer@subsectionintoc {3}{1}{Overview}{25}{0}{3}
+\beamer@subsectionintoc {3}{2}{Initial processing}{27}{0}{3}
+\beamer@subsectionintoc {3}{3}{Aligning reads}{29}{0}{3}
+\beamer@subsectionintoc {3}{4}{Counting}{34}{0}{3}
+\beamer@subsectionintoc {3}{5}{Differential expression}{38}{0}{3}
+\beamer@subsectionintoc {3}{6}{Further analysis}{43}{0}{3}
+\beamer@sectionintoc {4}{What about de-novo assembly of transcriptomes?}{44}{0}{4}
+\beamer@subsectionintoc {4}{1}{Overview}{45}{0}{4}
+\beamer@subsectionintoc {4}{2}{Building a reference transcriptome}{46}{0}{4}
+\beamer@subsectionintoc {4}{3}{Annotations of transcripts}{49}{0}{4}
+\beamer@sectionintoc {5}{And what about scRNA-seq?}{50}{0}{5}
+\beamer@sectionintoc {6}{Summary}{51}{0}{6}
+\beamer@sectionintoc {7}{Exercises}{52}{0}{7}
+\beamer@subsectionintoc {7}{1}{Main exercise}{53}{0}{7}
+\beamer@subsectionintoc {7}{2}{Bonus exercises}{54}{0}{7}
