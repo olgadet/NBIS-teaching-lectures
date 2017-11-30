@@ -408,14 +408,14 @@ HTSeq, featureCounts, R
 \begin{frame}
 \frametitle{Normalizing counts}
 \begin{displayquote}
-Gene counts depend e.g. on sequencing depth a sample and on the sequence lighten of the gene/transcript. Raw read counts cannot be used to compare gene expression across libraries. 
+Gene counts depend e.g. on sequencing depth of a sample and on the sequence length of the gene/transcript. Raw read counts cannot be used to compare gene expression across libraries. 
 \end{displayquote}
 \begin{block}{Normalization methods}
 \begin{itemize}
 \item CPM, counts per million, accounts for sequencing depth
 \item RPKM/FPKM, Reads/Fragments Per Kilobase Per Milion accounts for sequencing depth and transcript length
 \item TMM, Trimmed Mean of M-values, accounts for sequencing depth and transcript length and composition of the RNA population
-\item any few other using scaling factors
+\item and few other using scaling factors methods...
 \end{itemize}
 \end{block}
 \end{frame}
@@ -479,7 +479,7 @@ in RNA-seq case:
 \begin{frame}
 \frametitle{Differential expression}
 \begin{displayquote}
-Usually, reads counts do not usually follow normal distribution \& we work with low number of replicates or samples per group
+Usually, reads counts do not follow normal distribution \& we work with low number of biological replicates
 \end{displayquote}
 \begin{block}{DE methods}
 \begin{itemize}
@@ -621,7 +621,40 @@ If a reference genome is available, annotation is relatively straightforward:  g
 \end{frame}
 
 \section{And what about scRNA-seq?}
-\section{Summary}
+\begin{frame}
+\centering
+\includegraphics[width=9cm]{Images/scRNAseq_workflow.jpg}
+\begin{itemize}
+\footnotesize
+  \item scRNA-seq are affected by higher noise (amplification biases, dropout event, 3'bias, partical coverage, uneven depth, stochatic nature of transcription, multimodality in gene expression)
+  \item read processing steps to generate count matrix are largely the same as for bulk RNA-seq, but the spike-in normalization is a must 
+\end{itemize}
+\end{frame}
+
+\subsection{Common steps}
+\begin{frame}
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\centering
+\includegraphics[width=5cm]{Images/scRNAseq_cluster.jpg}
+\end{column}
+\begin{column}{0.48\textwidth}
+Common steps
+\begin{itemize}
+\footnotesize
+  \item Quality control on the cells
+  \item Classification of the cell-cycle phase
+  \item Normalization of cell-specific biases
+  \item Checking for important technical factors
+  \item Modelling and removing technical noise
+  \item Data exploration with dimensionality reduction
+  \item Clustering cells into putative subpopulations
+  \item Detecting marker genes between subpopulations
+  \item see more: Bioconductor simpleSingleCell workflow
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
 
 \section{Exercises}
 \subsection{Main exercise}

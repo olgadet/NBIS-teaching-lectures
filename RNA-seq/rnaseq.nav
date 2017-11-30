@@ -115,26 +115,26 @@
 \headcommand {\beamer@subsectionpages {49}{49}}
 \headcommand {\slideentry {5}{0}{1}{50/50}{}{0}}
 \headcommand {\beamer@framepages {50}{50}}
-\headcommand {\sectionentry {6}{Summary}{51}{Summary}{0}}
-\headcommand {\beamer@sectionpages {50}{50}}
-\headcommand {\beamer@subsectionpages {50}{50}}
-\headcommand {\slideentry {6}{0}{1}{51/51}{}{0}}
+\headcommand {\slideentry {5}{0}{2}{51/51}{}{0}}
 \headcommand {\beamer@framepages {51}{51}}
-\headcommand {\sectionentry {7}{Exercises}{52}{Exercises}{0}}
-\headcommand {\beamer@sectionpages {51}{51}}
-\headcommand {\beamer@subsectionpages {51}{51}}
-\headcommand {\slideentry {7}{0}{1}{52/52}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{52}{Common steps}}\headcommand {\beamer@subsectionpages {50}{51}}
+\headcommand {\slideentry {5}{1}{1}{52/52}{Common steps}{0}}
 \headcommand {\beamer@framepages {52}{52}}
-\headcommand {\beamer@subsectionentry {0}{7}{1}{53}{Main exercise}}\headcommand {\beamer@subsectionpages {52}{52}}
-\headcommand {\slideentry {7}{1}{1}{53/53}{Main exercise}{0}}
+\headcommand {\sectionentry {6}{Exercises}{53}{Exercises}{0}}
+\headcommand {\beamer@sectionpages {50}{52}}
+\headcommand {\beamer@subsectionpages {52}{52}}
+\headcommand {\slideentry {6}{0}{1}{53/53}{}{0}}
 \headcommand {\beamer@framepages {53}{53}}
-\headcommand {\beamer@subsectionentry {0}{7}{2}{54}{Bonus exercises}}\headcommand {\beamer@subsectionpages {53}{53}}
-\headcommand {\slideentry {7}{2}{1}{54/54}{Bonus exercises}{0}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{54}{Main exercise}}\headcommand {\beamer@subsectionpages {53}{53}}
+\headcommand {\slideentry {6}{1}{1}{54/54}{Main exercise}{0}}
 \headcommand {\beamer@framepages {54}{54}}
-\headcommand {\slideentry {7}{2}{2}{55/55}{Bonus exercises}{0}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{55}{Bonus exercises}}\headcommand {\beamer@subsectionpages {54}{54}}
+\headcommand {\slideentry {6}{2}{1}{55/55}{Bonus exercises}{0}}
 \headcommand {\beamer@framepages {55}{55}}
-\headcommand {\beamer@partpages {1}{55}}
-\headcommand {\beamer@subsectionpages {54}{55}}
-\headcommand {\beamer@sectionpages {52}{55}}
-\headcommand {\beamer@documentpages {55}}
-\headcommand {\def \inserttotalframenumber {48}}
+\headcommand {\slideentry {6}{2}{2}{56/56}{Bonus exercises}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@partpages {1}{56}}
+\headcommand {\beamer@subsectionpages {55}{56}}
+\headcommand {\beamer@sectionpages {53}{56}}
+\headcommand {\beamer@documentpages {56}}
+\headcommand {\def \inserttotalframenumber {49}}

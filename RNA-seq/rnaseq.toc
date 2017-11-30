@@ -20,7 +20,7 @@
 \beamer@subsectionintoc {4}{2}{Building a reference transcriptome}{46}{0}{4}
 \beamer@subsectionintoc {4}{3}{Annotations of transcripts}{49}{0}{4}
 \beamer@sectionintoc {5}{And what about scRNA-seq?}{50}{0}{5}
-\beamer@sectionintoc {6}{Summary}{51}{0}{6}
-\beamer@sectionintoc {7}{Exercises}{52}{0}{7}
-\beamer@subsectionintoc {7}{1}{Main exercise}{53}{0}{7}
-\beamer@subsectionintoc {7}{2}{Bonus exercises}{54}{0}{7}
+\beamer@subsectionintoc {5}{1}{Common steps}{52}{0}{5}
+\beamer@sectionintoc {6}{Exercises}{53}{0}{6}
+\beamer@subsectionintoc {6}{1}{Main exercise}{54}{0}{6}
+\beamer@subsectionintoc {6}{2}{Bonus exercises}{55}{0}{6}
