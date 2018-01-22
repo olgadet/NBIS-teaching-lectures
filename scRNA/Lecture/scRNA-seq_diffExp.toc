@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Common methods}{6}{0}{2}
+\beamer@sectionintoc {3}{Performance}{23}{0}{3}
+\beamer@sectionintoc {4}{Summary}{31}{0}{4}
+\beamer@sectionintoc {5}{DE tutorial}{33}{0}{5}
+\beamer@sectionintoc {6}{Finally}{35}{0}{6}
