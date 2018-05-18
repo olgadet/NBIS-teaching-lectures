@@ -1,0 +1,479 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Wu2017}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Wu}{W.}%
+     {Zhijin}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Yi}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Stitzel}{S.}%
+     {Michael~L}{M.~L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wu}{W.}%
+     {Hao}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WZ+1}
+  \strng{fullhash}{WZZYSMLWH1}
+  \field{labelyear}{2017}
+  \field{abstract}{%
+  Motivation: Single-cell RNA-sequencing (scRNA-seq) has brought the study of
+  the transcriptome to higher resolution and makes it pos-sible for scientists
+  to provide answers with more clarity to the question of " differential
+  expression " . However, most computational methods still stick with the old
+  mentality of viewing differential expression as a simple " up or down "
+  phenomenon. We advocate that we should fully embrace the features of single
+  cell data, which allows us to observe binary (from Off to On) as well as
+  continuous (the amount of expression) regulations. Results: We develop a
+  method, termed SC2P, that first identifies the phase of expression a gene is
+  in, by taking into account of both cell-and gene-specific contexts, in a
+  model-based and data-driven fashion. We then identify two forms of
+  transcription regulation: phase transition, and magnitude tuning. We
+  demonstrate that compared with existing methods, SC2P provides substantial
+  improvement in sensiti-vity without sacrificing the control of false
+  discovery, as well as better robustness. Furthermore, the analysis provides
+  better interpretation of the nature of regulation types in different genes.
+  Availability: SC2P is implemented as an open source R package publicly
+  available at https://github.com/haowulab/SC2P.%
+  }
+  \verb{doi}
+  \verb 10.1093/bioinformatics/bty329
+  \endverb
+  \field{issn}{1367-4803}
+  \field{number}{00}
+  \field{pages}{1\bibrangedash 9}
+  \field{title}{{Two-phase differential expression analysis for single cell
+  RNA-seq}}
+  \field{volume}{00}
+  \verb{file}
+  \verb :Users/olga/Desktop/teaching/scRNA-seq/Lecture/papers/Wu-2017-TwoPhaseD
+  \verb ifferentialExpression.pdf:pdf
+  \endverb
+  \field{journaltitle}{Bioinformatics}
+  \field{year}{2017}
+\endentry
+
+\entry{Miao2016}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Miao}{M.}%
+     {Zhun}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Xuegong}{X.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{RNA-Seq,differential expression,single-cell}
+  \strng{namehash}{MZZX1}
+  \strng{fullhash}{MZZX1}
+  \field{labelyear}{2016}
+  \field{abstract}{%
+  Background$\backslash$r$\backslash$n$\backslash$r$\backslash$nSingle-cell RNA
+  sequencing (scRNA-seq) is an emerging technology that enables high resolution
+  detection of heterogeneities between cells. One important application of
+  scRNA-seq data is to detect differential expression (DE) of genes. Currently,
+  some researchers still use DE analysis methods developed for bulk RNA-Seq
+  data on single-cell data, and some new methods for scRNA-seq data have also
+  been developed. Bulk and single-cell RNA-seq data have different
+  characteristics. A systematic evaluation of the two types of methods on
+  scRNA-seq data is
+  needed.$\backslash$r$\backslash$n$\backslash$r$\backslash$nResults$\backslash$r$\backslash$n$\backslash$r$\backslash$nIn
+  this study, we conducted a series of experiments on scRNA-seq data to
+  quantitatively evaluate 14 popular DE analysis methods, including both of
+  traditional methods developed for bulk RNA-seq data and new methods
+  specifically designed for scRNA-seq data. We obtained observations and
+  recommendations for the methods under different
+  situations.$\backslash$r$\backslash$n$\backslash$r$\backslash$nConclusions$\backslash$r$\backslash$n$\backslash$r$\backslash$nDE
+  analysis methods should be chosen for scRNA-seq data with great caution with
+  regard to different situations of data. Different strategies should be taken
+  for data with different sample sizes and/or different strengths of the
+  expected signals. Several methods for scRNA-seq data show advantages in some
+  aspects, and DEGSeq tends to outperform other methods with respect to
+  consistency, reproducibility and accuracy of predictions on scRNA-seq data.%
+  }
+  \verb{doi}
+  \verb 10.1007/s40484-016-0089-7
+  \endverb
+  \field{issn}{20954697}
+  \field{number}{4}
+  \field{pages}{243\bibrangedash 260}
+  \field{title}{{Differential expression analyses for single-cell RNA-Seq: old
+  questions on new data}}
+  \field{volume}{4}
+  \verb{file}
+  \verb :Users/olga/Desktop/teaching/scRNA-seq/Lecture/papers/Miao-2016-oldQues
+  \verb tionOnNewData.pdf:pdf
+  \endverb
+  \field{journaltitle}{Quantitative Biology}
+  \field{year}{2016}
+\endentry
+
+\entry{Soneson2018}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Soneson}{S.}%
+     {Charlotte}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Robinson}{R.}%
+     {Mark~D.}{M.~D.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Nature Publishing Group}%
+  }
+  \strng{namehash}{SCRMD1}
+  \strng{fullhash}{SCRMD1}
+  \field{labelyear}{2018}
+  \field{abstract}{%
+  An extensive evaluation of differential expression methods applied to
+  single-cell expression data, using uniformly processed public data in the new
+  conquer resource.%
+  }
+  \verb{doi}
+  \verb 10.1038/nmeth.4612
+  \endverb
+  \field{issn}{15487105}
+  \field{number}{4}
+  \field{pages}{255\bibrangedash 261}
+  \field{title}{{Bias, robustness and scalability in single-cell differential
+  expression analysis}}
+  \verb{url}
+  \verb http://dx.doi.org/10.1038/nmeth.4612
+  \endverb
+  \field{volume}{15}
+  \verb{file}
+  \verb :Users/olga/Desktop/teaching/scRNA-seq/Lecture/papers/Robinson-2018-Bia
+  \verb s.pdf:pdf
+  \endverb
+  \field{journaltitle}{Nature Methods}
+  \field{year}{2018}
+\endentry
+
+\entry{DalMolin2017}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {{Dal Molin}}{D.}%
+     {Alessandra}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Baruzzo}{B.}%
+     {Giacomo}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Di Camillo}}{D.}%
+     {Barbara}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Assessment,Benchmark,Differential distributions,Differential
+  expression,Single-cell RNA-seq}
+  \strng{namehash}{DABGDB1}
+  \strng{fullhash}{DABGDB1}
+  \field{labelyear}{2017}
+  \field{abstract}{%
+  The sequencing of the transcriptomes of single-cells, or single-cell
+  RNA-sequencing, has now become the dominant technology for the identification
+  of novel cell types and for the study of stochastic gene expression. In
+  recent years, various tools for analyzing single-cell RNA-sequencing data
+  have been proposed, many of them with the purpose of performing
+  differentially expression analysis. In this work, we compare four different
+  tools for single-cell RNA-sequencing differential expression, together with
+  two popular methods originally developed for the analysis of bulk
+  RNA-sequencing data, but largely applied to single-cell data. We discuss
+  results obtained on two real and one synthetic dataset, along with
+  considerations about the perspectives of single-cell differential expression
+  analysis. In particular, we explore the methods performance in four different
+  scenarios, mimicking different unimodal or bimodal distributions of the data,
+  as characteristic of single-cell transcriptomics. We observed marked
+  differences between the selected methods in terms of precision and recall,
+  the number of detected differentially expressed genes and the overall
+  performance. Globally, the results obtained in our study suggest that is
+  difficult to identify a best performing tool and that efforts are needed to
+  improve the methodologies for single-cell RNA-sequencing data analysis and
+  gain better accuracy of results.%
+  }
+  \verb{doi}
+  \verb 10.3389/fgene.2017.00062
+  \endverb
+  \field{isbn}{1664-8021}
+  \field{issn}{16648021}
+  \field{number}{MAY}
+  \field{title}{{Single-cell RNA-sequencing: Assessment of differential
+  expression analysis methods}}
+  \field{volume}{8}
+  \verb{file}
+  \verb :Users/olga/Desktop/teaching/scRNA-seq/Lecture/papers/Molin{\_}2017-scR
+  \verb NAseq-DE.pdf:pdf
+  \endverb
+  \field{journaltitle}{Frontiers in Genetics}
+  \field{year}{2017}
+\endentry
+
+\entry{Miao2017}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Miao}{M.}%
+     {Zhun}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Deng}{D.}%
+     {Ke}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Xiaowo}{X.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Xuegong}{X.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MZ+1}
+  \strng{fullhash}{MZDKWXZX1}
+  \field{labelyear}{2017}
+  \verb{doi}
+  \verb 10.1093/bioinformatics/bty332
+  \endverb
+  \verb{eprint}
+  \verb 103549
+  \endverb
+  \field{issn}{1367-4803}
+  \field{number}{May}
+  \field{pages}{1\bibrangedash 2}
+  \field{title}{{DEsingle for detecting three types of differential expression
+  in single-cell RNA-seq data}}
+  \verb{file}
+  \verb :Users/olga/Desktop/teaching/scRNA-seq/Lecture/papers/Miao-2018-DEsingl
+  \verb e.pdf:pdf
+  \endverb
+  \field{eprinttype}{arXiv}
+  \field{year}{2017}
+\endentry
+
+\entry{Stegle2015}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Stegle}{S.}%
+     {Oliver}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Teichmann}{T.}%
+     {Sarah~A}{S.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Marioni}{M.}%
+     {John~C}{J.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Nature Publishing Group}%
+  }
+  \keyw{RNA-Seq,single cell sequencing}
+  \strng{namehash}{SOTSAMJC1}
+  \strng{fullhash}{SOTSAMJC1}
+  \field{labelyear}{2015}
+  \field{abstract}{%
+  The development of high-throughput RNA sequencing (RNA-seq) at the
+  single-cell level has already led to profound new discoveries in biology,
+  ranging from the identification of novel cell types to the study of global
+  patterns of stochastic gene expression. Alongside the technological
+  breakthroughs that have facilitated the large-scale generation of single-cell
+  transcriptomic data, it is important to consider the specific computational
+  and analytical challenges that still have to be overcome. Although some tools
+  for analysing RNA-seq data from bulk cell populations can be readily applied
+  to single-cell RNA-seq data, many new computational strategies are required
+  to fully exploit this data type and to enable a comprehensive yet detailed
+  study of gene expression at the single-cell level.%
+  }
+  \field{number}{January 2014}
+  \field{pages}{133\bibrangedash 145}
+  \field{title}{{Computational and analytical challenges in single-cell
+  transcriptomics.}}
+  \field{volume}{16}
+  \verb{file}
+  \verb :Users/olga/Library/Application Support/Mendeley Desktop/Downloaded/Ste
+  \verb gle, Teichmann, Marioni - 2015 - Computational and analytical challenge
+  \verb s in single-cell transcriptomics.pdf:pdf
+  \endverb
+  \field{journaltitle}{Nature reviews. Genetics}
+  \field{year}{2015}
+\endentry
+
+\entry{Angerer2017}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Angerer}{A.}%
+     {Philipp}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Simon}{S.}%
+     {Lukas}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tritschler}{T.}%
+     {Sophie}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wolf}{W.}%
+     {F.~Alexander}{F.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fischer}{F.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Theis}{T.}%
+     {Fabian~J.}{F.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier Ltd}%
+  }
+  \keyw{Big data,Machine learning,Single-cell RNA-seq,Single-cell
+  transcriptomics}
+  \strng{namehash}{AP+1}
+  \strng{fullhash}{APSLTSWFAFDTFJ1}
+  \field{labelyear}{2017}
+  \field{abstract}{%
+  Recent technological advances have enabled unprecedented insight into
+  transcriptomics at the level of single cells. Single cell transcriptomics
+  enables the measurement of transcriptomic information of thousands of single
+  cells in a single experiment. The volume and complexity of resulting data
+  make it a paradigm of big data. Consequently, the field is presented with new
+  scientific and, in particular, analytical challenges where currently no
+  scalable solutions exist. At the same time, exciting opportunities arise from
+  increased resolution of single-cell RNA sequencing data and improved
+  statistical power of ever growing datasets. Big single cell RNA sequencing
+  data promises valuable insights into cellular heterogeneity which may
+  significantly improve our understanding of biology and human disease. This
+  review focuses on single cell transcriptomics and highlights the inherent
+  opportunities and challenges in the context of big data analytics.%
+  }
+  \verb{doi}
+  \verb 10.1016/j.coisb.2017.07.004
+  \endverb
+  \field{isbn}{2452-3100}
+  \field{issn}{24523100}
+  \field{pages}{85\bibrangedash 91}
+  \field{title}{{Single cells make big data: New challenges and opportunities
+  in transcriptomics}}
+  \verb{url}
+  \verb http://dx.doi.org/10.1016/j.coisb.2017.07.004
+  \endverb
+  \field{volume}{4}
+  \verb{file}
+  \verb :Users/olga/Desktop/teaching/scRNA-seq/Lecture/papers/Angerer-2017-Sing
+  \verb elCellsMakeBigData.pdf:pdf
+  \endverb
+  \field{journaltitle}{Current Opinion in Systems Biology}
+  \field{year}{2017}
+\endentry
+
+\entry{Zappia2018}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Zappia}{Z.}%
+     {Luke}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Phipson}{P.}%
+     {Belinda}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Oshlack}{O.}%
+     {Alicia}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ZLPBOA1}
+  \strng{fullhash}{ZLPBOA1}
+  \field{labelyear}{2018}
+  \field{abstract}{%
+  As single-cell RNA-sequencing (scRNA-seq) datasets have become more
+  widespread the number of tools designed to analyse these data has
+  dramatically increased. Navigating the vast sea of tools now available is
+  becoming increasingly challenging for researchers. In order to better
+  facilitate selection of appropriate analysis tools we have created the
+  scRNA-tools database (www.scRNA-tools.org) to catalogue and curate analysis
+  tools as they become available. Our database collects a range of information
+  on each scRNA-seq analysis tool and categorises them according to the
+  analysis tasks they perform. Exploration of this database gives insights into
+  the areas of rapid development of analysis methods for scRNA-seq data. We see
+  that many tools perform tasks specific to scRNA-seq analysis, particularly
+  clustering and ordering of cells. We also find that the scRNA-seq community
+  embraces an open-source approach, with most tools available under open-source
+  licenses and preprints being extensively used as a means to describe methods.
+  The scRNA-tools database provides a valuable resource for researchers
+  embarking on scRNA-seq analysis and records of the growth of the field over
+  time.%
+  }
+  \verb{doi}
+  \verb 10.1101/206573
+  \endverb
+  \field{pages}{206573}
+  \field{title}{{Exploring the single-cell RNA-seq analysis landscape with the
+  scRNA-tools database}}
+  \verb{url}
+  \verb https://www.biorxiv.org/content/early/2018/03/23/206573
+  \endverb
+  \verb{file}
+  \verb :Users/olga/Desktop/teaching/scRNA-seq/Lecture/papers/Oshlack-2017P-scR
+  \verb NA-tools.pdf:pdf
+  \endverb
+  \field{journaltitle}{bioRxiv}
+  \field{year}{2018}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
