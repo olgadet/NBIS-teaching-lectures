@@ -28,7 +28,8 @@
 
 \title[scRNA-seq DE]{scRNA-seq}
 \subtitle{Differential expression analyses}
-\author[Olga]{Olga Dethlefsen}
+%\author[Olga]{Olga Dethlefsen}
+\author[Olga]{Olga Dethlefsen\\{\scriptsize olga.dethlefsen@nbis.se}}
 \institute[NBIS]{NBIS, National Bioinformatics Infrastructure Sweden\\}
 \date[May 2018]{May 2018}
 
@@ -124,7 +125,7 @@ Differential expression is an old "problem"
 \scriptsize
 \begin{itemize}
   \item known from bulk RNA-seq and microarray studies
-  \item in fact building on one of the most common stastistical problems, i.e comparing groups for statistical differences
+  \item in fact building on one of the most common statistical problems, i.e comparing groups for statistical differences
  \end{itemize}
 
 \end{columns}
@@ -182,20 +183,20 @@ Differential expression is an old "problem"
 \end{frame}
 
 % CM: Name methods
-\begin{frame}
+\begin{frame} \pause
 \begin{block}{Generic}
 \begin{itemize}
   \item parametric tests, e.g. t-test
   \item non-parametric tests, e.g. Kruskal-Wallis
 \end{itemize}
-\end{block}
+\end{block} \pause
 \begin{block}{RNA-seq based}
 \begin{itemize}
   \item edgeR
   \item limma
   \item DEseq2 
 \end{itemize}
-\end{block}
+\end{block} \pause
 \begin{block}{scRNA-seq specific}
 \begin{itemize}
   \item MAST, SCDE, Monocle
@@ -373,7 +374,7 @@ lines(xfit2, yfit2, col="black", lwd=2)
 % CM: Mast 2
 \begin{frame}
 %\frametitle{MAST}
-\begin{block}{MAST (revisted)}
+\begin{block}{MAST (revisited)}
 \vspace{0.5cm}
 \scriptsize
 \begin{itemize}
@@ -479,7 +480,7 @@ hist(rnbinom(1000, mu = 4, size = 100), col=rgb(0.8,0.8,0.8,0.5), xlab="Read Cou
 }
 
 \begin{frame}
-No ground truth, i.e. no independently validated truth is available for testing
+No ground truth, i.e. no independently validated truth is available for testing \pause
 \vspace{0.5cm}
 \begin{columns}
 \column{0.4\textwidth}
@@ -590,8 +591,8 @@ And so much more...
 Bias, robustness and scalability in single-cell differential expression analysis
 \begin{itemize}
   \item 36 statistical approaches for DE analysis to compare the expression levels in the two groups of cells
-  \item based on 9 datasets, with 11 - 21 separate instances (sample size effect)
-  \item extensive evaluation metrics incl. number of genes found, characteristics of the false postivie detections, robutsness of methods, similarities between methods etc. 
+  \item based on 9 data sets, with 11 - 21 separate instances (sample size effect)
+  \item extensive evaluation metrics incl. number of genes found, characteristics of the false positive detections, robustness of methods, similarities between methods etc. 
   \item \textit{conquer}, a collection of consistently processed, analysis-ready public scRNA-seq data sets
 \end{itemize}
 \column{0.4\textwidth}
@@ -664,9 +665,9 @@ Example data: 46,078 genes x 96 cells \newline
 QC filtering \newline \newline
 Cell-cycle phase \newline \newline
 Normalization of cell-specific biases \newline \newline
-Confouding factors, incl. batch effects \newline \newline
+Confounding factors, incl. batch effects \newline \newline
 Detection rate, i.e the fraction of detected genes per cell \newline \newline
-Impututations strategies for dropout values  \newline \newline \newline
+Imputations strategies for dropout values  \newline \newline \newline
 What is pragmatic: programming language, platform, speed, collaborative workflows etc.
 %\end{itemize}
 \end{columns}
