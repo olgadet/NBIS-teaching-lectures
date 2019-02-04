@@ -1,5 +1,7 @@
 rm(list=ls())
-load("testData.RData")
+load("Scripts/testData.RData")
+
+
 
 idx.tumor <- which(data.group=="Tumor")
 idx.normal <- which(data.group=="Brain")
@@ -11,4 +13,7 @@ hist(data.subset[1:10, idx.tumor], n=100)
 hist(data.subset[1:10, idx.normal], n=100)
 
 
-load("../DE/mast_data.Rdata")
+
+
+
+#load("../DE/mast_data.Rdata")

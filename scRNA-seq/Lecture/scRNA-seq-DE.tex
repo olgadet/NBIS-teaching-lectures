@@ -69,7 +69,7 @@
 \usepackage[font=footnotesize,labelfont=bf]{caption} 
 \usepackage{mwe,tikz}
 \usepackage[percent]{overpic}
-
+\usepackage{amssymb}
 
 \setbeamerfont{caption}{size=\scriptsize}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
@@ -81,7 +81,7 @@
 %\author[Olga]{Olga Dethlefsen}
 \author[Olga]{Olga Dethlefsen\\{\scriptsize olga.dethlefsen@nbis.se}}
 \institute[NBIS]{NBIS, National Bioinformatics Infrastructure Sweden\\}
-\date[May 2018]{May 2018}
+\date[February 2019]{February 2019}
 
 \logo{%
   \includegraphics[height=1cm,keepaspectratio]{Images/SciLifeLab-logo.jpg}%
@@ -114,21 +114,21 @@
 \end{block}
 \end{frame}
 
-% Get to know each other: menti
-\begin{frame}
-\begin{center}
-Let's get to know each other
-\begin{figure}
-\includegraphics[width=12cm]{Images/menti.png}
-\end{figure}
-\href{https://www.menti.com}{https://www.menti.com}
-\end{center}
-\end{frame}
-
 \section{Introduction}
 \begin{frame}
 \begin{center}
 \insertsection
+\end{center}
+\end{frame}
+
+% Intro: defying differential expression (Menti)
+\begin{frame}
+\begin{center}
+What does "differential expression" mean to you?
+\begin{figure}
+\includegraphics[width=12cm]{Images/menti.png}
+\end{figure}
+\href{https://www.menti.com}{https://www.menti.com}
 \end{center}
 \end{frame}
 
@@ -188,7 +188,7 @@ Differential expression is an old "problem"
 %\vspace{0.2cm}
 \end{center}
 \begin{center}
-\href{https://www.menti.com}{https://www.menti.com} \& 70 52 87 \pause
+\href{https://www.menti.com}{https://www.menti.com} \& 25 06 78 \pause
 \end{center}
 \vspace{0.5cm}
 \begin{block}{scRNA-seq: special characteristics}
@@ -231,25 +231,41 @@ Differential expression is an old "problem"
 \end{center}
 \end{frame}
 
-% CM: Name methods
-\begin{frame} \pause
-\begin{block}{Generic}
+% CM: Name methods: non-parametric
+\begin{frame} %\pause
+\begin{block}{Generic non-parametric methods}
 \begin{itemize}
-  \item parametric tests, e.g. t-test
-  \item non-parametric tests, e.g. Kruskal-Wallis
+\small
+  \item e.g. Wilcoxon rank-sum test, Kruskal-Wallis, Kolmogorov-Smirnov test
+  \item non-parametric tests generally convert observed expression values to ranks \& test whether the distribution of ranks for one group are signficantly different from the distribution of ranks for the other group
+  \item some non-parametric methods fail in the presence of a large number of tied values, such as the case for dropouts (zeros) in single-cell RNA-seq expression data
+  \item if the conditions for a parametric test hold, then it will typically be more powerful than a non-parametric test.
 \end{itemize}
-\end{block} \pause
-\begin{block}{RNA-seq based}
+\end{block}
+\end{frame}
+
+
+% CM: Name methods: bulk RNA-seqq
+\begin{frame} %\pause
+\begin{block}{developed for bulk RNA-seq}
 \begin{itemize}
-  \item edgeR
-  \item limma
-  \item DEseq2 
+\small 
+  \item e.g. edgeR, DE-seq2
+  \item compare estimates of mean-expression (sample size)
+  \item based on negative binomial distribution
+  \item can be assessed by datasets where RNA-seq data has beeen validated by RT-qPCR
 \end{itemize}
-\end{block} \pause
-\begin{block}{scRNA-seq specific}
+\end{block}
+\end{frame}
+
+% CM: Name methods: scRNA-seq
+\begin{frame} %\pause
+\begin{block}{developed for scRNA-seq}
 \begin{itemize}
-  \item MAST, SCDE, Monocle
-  \item D$^3$E, Pagoda
+\small
+  \item e.g. MAST, SCDE, Monocle, Pagoda, D$^3$E etc. 
+  \item large number of samples (i.e. cells) for each group we are comparing in single-cell experiments. Thus we can take advantage of the whole distribution of expression values in each group to identify differences between groups 
+  \item we usually do not have a defined set of experimental conditions; instead we try to  identify the cell groups by using an unsupervised clustering approach.
  \end{itemize}
 \end{block}
 \end{frame}
@@ -306,42 +322,42 @@ Differential expression is an old "problem"
 \end{block}
 \end{frame}
 
-% CM: SCDE
-\begin{frame}
-\begin{block}{SCDE}
-\vspace{0.5cm}
-\scriptsize
-\begin{itemize}
-  \item \underline{models} the read counts for each gene using a mixture of a NB, negative binomial, and a Poisson distribution
-  \item \underline{NB distribution} models the transcripts that are amplified and detected
-  \item \underline{Poisson distribution} models the unobserved or background-level signal of transcripts that are not amplified (e.g. dropout events)
-  \item subset of robust genes is used to fit, via \underline{EM} algorithm, the parameters to the mixture of models
-  \item For DE, the posterior probability that the gene shows a fold expression difference between two conditions is computed using a \underline{Bayesian approach}
-\end{itemize}
-\end{block}
-\end{frame}
-
-% CM: Monocole
-\begin{frame}
-\begin{block}{Monocole}
-\vspace{0.5cm}
-\scriptsize
-\begin{itemize}
-\item Originally designed for ordering cells by progress through differentiation stages (pseudo-time)
-\item The mean expression level of each gene is \underline{modeled with a GAM}, generalized additive model, which relates one or more predictor variables to a response variable as
-\end{itemize}
-   \begin{center}
-    $g(E(Y))=\beta_0+f_1(x_1)+f_2(x_2)+...+f_m(x_m)$ where Y is a specific gene expression level, $x_i$ are predictor variables, g is a link function, typically log function, and $f_i$ are non-parametric functions (e.g. cubic splines)
-  \end{center}
-\begin{itemize}
-\item The observable expression level Y is then modeled using GAM,
-\end{itemize}
-$E(Y)=s(\varphi_t(b_x, s_i))+\epsilon$ where $\varphi_t(b_x, s_i)$ is the assigned pseudo-time of a cell and $s$ is a cubic smoothing function with three degrees of freedom. The error term $\epsilon$ is normally distributed with a mean of zero
-\begin{itemize}
-\item The DE test is performed using an \underline{approx. $\chi^2$ likelihood ratio test}
-\end{itemize}
-\end{block}
-\end{frame}
+% % CM: SCDE
+% \begin{frame}
+% \begin{block}{SCDE}
+% \vspace{0.5cm}
+% \scriptsize
+% \begin{itemize}
+%   \item \underline{models} the read counts for each gene using a mixture of a NB, negative binomial, and a Poisson distribution
+%   \item \underline{NB distribution} models the transcripts that are amplified and detected
+%   \item \underline{Poisson distribution} models the unobserved or background-level signal of transcripts that are not amplified (e.g. dropout events)
+%   \item subset of robust genes is used to fit, via \underline{EM} algorithm, the parameters to the mixture of models
+%   \item For DE, the posterior probability that the gene shows a fold expression difference between two conditions is computed using a \underline{Bayesian approach}
+% \end{itemize}
+% \end{block}
+% \end{frame}
+% 
+% % CM: Monocole
+% \begin{frame}
+% \begin{block}{Monocole}
+% \vspace{0.5cm}
+% \scriptsize
+% \begin{itemize}
+% \item Originally designed for ordering cells by progress through differentiation stages (pseudo-time)
+% \item The mean expression level of each gene is \underline{modeled with a GAM}, generalized additive model, which relates one or more predictor variables to a response variable as
+% \end{itemize}
+%    \begin{center}
+%     $g(E(Y))=\beta_0+f_1(x_1)+f_2(x_2)+...+f_m(x_m)$ where Y is a specific gene expression level, $x_i$ are predictor variables, g is a link function, typically log function, and $f_i$ are non-parametric functions (e.g. cubic splines)
+%   \end{center}
+% \begin{itemize}
+% \item The observable expression level Y is then modeled using GAM,
+% \end{itemize}
+% $E(Y)=s(\varphi_t(b_x, s_i))+\epsilon$ where $\varphi_t(b_x, s_i)$ is the assigned pseudo-time of a cell and $s$ is a cubic smoothing function with three degrees of freedom. The error term $\epsilon$ is normally distributed with a mean of zero
+% \begin{itemize}
+% \item The DE test is performed using an \underline{approx. $\chi^2$ likelihood ratio test}
+% \end{itemize}
+% \end{block}
+% \end{frame}
 
 % CM: Let's stop for a minute
 \begin{frame}
@@ -408,6 +424,80 @@ $t=\frac{x_1-x_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$
 % \end{block}
 \end{frame}
 
+
+% CM: The key implications
+\begin{frame}
+\begin{block}{Generic recipe}
+\begin{itemize}
+\item model e.g. gene expression with random error
+\item fit model to the data and/or data to the model, estimate model parameters
+\item use model for prediction and/or inference
+\end{itemize}
+\end{block}
+\vspace{0.5cm}
+
+\setbeamercolor{block title}{bg=red!10,fg=black}
+\setbeamercolor{block body}{use=structure,fg=white,bg=red!30}
+\begin{block}{Important implication}
+the better model \href{http://www.itl.nist.gov/div898/handbook/pmd/section4/pmd44.htm}{fits} to the data the better statistics
+\end{block}
+\end{frame}
+
+
+% CM: Distributions: negative binomial
+\begin{frame}
+\begin{block}{Common distributions}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/dist-NB-1} 
+
+\end{knitrout}
+\tiny
+$$\mu=mu$$
+$$\delta^2=mu+mu^2/size$$
+
+\textit{mu}: mean expression, \textit{size}: and the dispersion, which is inversely related to the variance. NB fits bulk RNA-seq data very well and it is used for most statistical methods designed for such data. In addition, it has been show to fit the distribution of molecule counts obtained from data tagged by unique molecular identifiers (UMIs) quite well (Grun et al. 2014, Islam et al. 2011).
+
+\end{block}
+\end{frame}
+
+% CM: Distributions: zero inflated NB
+\begin{frame}
+\begin{block}{Common distributions} % zero inflated model
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/dist-zero-inlated-NB-1} 
+
+\end{knitrout}
+
+\tiny
+$$\mu=mu*(1-d)$$
+$$\delta^2=\mu*(1-d)*(1+d*\mu+\mu/size)$$
+
+\textit{d}, dropout rate. The dropout rate of a gene is strongly correlated with the mean expression of the gene. Different zero-inflated negative binomial models use different relationships between \textit{mu} and \textit{d} and some may fit \textit{mu} and \textit{d} to the expression of each gene independently. Implemented in MAST, SCDE. 
+\end{block}
+\end{frame}
+
+% CM: Distributions
+\begin{frame}
+\begin{block}{Common distributions} % Poisson
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/dist-poisson-beta-1} 
+
+\end{knitrout}
+
+\tiny
+$$\mu=g*a/(a+b)$$
+$$\delta^2=g^2*a*b/((a+b+1)*(a+b)^2)$$
+
+\textit{a}: the rate of activation of transcription; \textit{b} the rate of inhibition of transcription; and \textit{g} the rate of transcript production while transcription is active at the locus. Differential expression methods may test each of the parameters for differences across groups or only one (often \textit{g}). Implemented in BPSC.
+
+May be further expanded to explicitly account for other sources of gene expression differences such as batch-effect or library depth depending on the particular DE algorithm. 
+\end{block}
+\end{frame}
+
+
 % CM: Mast 2
 \begin{frame}
 %\frametitle{MAST}
@@ -432,45 +522,40 @@ $t=\frac{x_1-x_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$
 \end{block}
 \end{frame}
 
-
-% CM: The key implications
+% CM: SCDE
 \begin{frame}
-\begin{block}{Generic recipe}
+\begin{block}{SCDE}
+\vspace{0.5cm}
+\scriptsize
 \begin{itemize}
-\item model e.g. gene expression with random error
-\item fit model to the data and/or data to the model, estimate model parameters
-\item use model for prediction and/or inference
+  \item \underline{models} the read counts for each gene using a mixture of a NB, negative binomial, and a Poisson distribution
+  \item \underline{NB distribution} models the transcripts that are amplified and detected
+  \item \underline{Poisson distribution} models the unobserved or background-level signal of transcripts that are not amplified (e.g. dropout events)
+  \item subset of robust genes is used to fit, via \underline{EM} algorithm, the parameters to the mixture of models
+  \item For DE, the posterior probability that the gene shows a fold expression difference between two conditions is computed using a \underline{Bayesian approach}
 \end{itemize}
 \end{block}
+\end{frame}
+
+% CM: Monocole
+\begin{frame}
+\begin{block}{Monocole}
 \vspace{0.5cm}
-
-\setbeamercolor{block title}{bg=red!10,fg=black}
-\setbeamercolor{block body}{use=structure,fg=white,bg=red!30}
-\begin{block}{Important implication}
-the better model \href{http://www.itl.nist.gov/div898/handbook/pmd/section4/pmd44.htm}{fits} to the data the better statistics
-\end{block}
-\end{frame}
-
-% CM: Distributions
-\begin{frame}
-\begin{block}{Common distributions}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/dist-1} 
-
-\end{knitrout}
-\end{block}
-\end{frame}
-
-
-% CM: Distributions
-\begin{frame}
-\begin{block}{Common distributions}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/dist-02-1} 
-
-\end{knitrout}
+\scriptsize
+\begin{itemize}
+\item Originally designed for ordering cells by progress through differentiation stages (pseudo-time)
+\item The mean expression level of each gene is \underline{modeled with a GAM}, generalized additive model, which relates one or more predictor variables to a response variable as
+\end{itemize}
+   \begin{center}
+    $g(E(Y))=\beta_0+f_1(x_1)+f_2(x_2)+...+f_m(x_m)$ where Y is a specific gene expression level, $x_i$ are predictor variables, g is a link function, typically log function, and $f_i$ are non-parametric functions (e.g. cubic splines)
+  \end{center}
+\begin{itemize}
+\item The observable expression level Y is then modeled using GAM,
+\end{itemize}
+$E(Y)=s(\varphi_t(b_x, s_i))+\epsilon$ where $\varphi_t(b_x, s_i)$ is the assigned pseudo-time of a cell and $s$ is a cubic smoothing function with three degrees of freedom. The error term $\epsilon$ is normally distributed with a mean of zero
+\begin{itemize}
+\item The DE test is performed using an \underline{approx. $\chi^2$ likelihood ratio test}
+\end{itemize}
 \end{block}
 \end{frame}
 
@@ -711,7 +796,7 @@ What is pragmatic: programming language, platform, speed, collaborative workflow
 %\vspace{0.2cm}
 \end{center}
 \begin{center}
-\href{https://www.menti.com}{https://www.menti.com} \& 70 52 87 %\pause
+\href{https://www.menti.com}{https://www.menti.com} \& 25 06 78%\pause
 \end{center}
 \end{frame}
 
